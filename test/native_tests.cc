@@ -8,14 +8,13 @@ namespace {
 
 NAN_METHOD(ArrayAbs) {
   int *arr = reinterpret_cast<int *>(Buffer::Data(info[0].As<v8::Object>()));
-  uint32_t length = info[1]->Uint32Value();
+  uint32_t length = Nan::To<uint32_t>(info[1]).FromJust();
   for (uint32_t i = 0; i < length; i++) {
     *(arr + i) = abs(arr[i]);
   }
 }
 
-void Initialize(v8::Handle<v8::Object> target) {
-  Nan::HandleScope scope;
+NAN_MODULE_INIT(Initialize) {
   Nan::SetMethod(target, "arrayAbs", ArrayAbs);
 }
 
