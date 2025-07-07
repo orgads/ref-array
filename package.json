@@ -1,15 +1,15 @@
 {
-  "name": "ref-array",
+  "name": "@audc/ref-array",
   "description": "Create C \"array\" instances on top of Buffers",
   "keywords": [
     "array",
     "ref"
   ],
-  "version": "1.2.0",
+  "version": "2.0.0",
   "author": "Nathan Rajlich <nathan@tootallnate.net> (http://tootallnate.net)",
   "repository": {
     "type": "git",
-    "url": "git://github.com/TooTallNate/ref-array.git"
+    "url": "https://github.com/orgads/ref-array"
   },
   "main": "./lib/array.js",
   "license": "MIT",
